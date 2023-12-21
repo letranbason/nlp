@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Environment variables file
+.env
+
+# Flask instance folder
+instance/
+
+# Logs
+*.log
+
+# Database files
+*.sqlite
+
+# If you use a .flaskenv file for environment variables
+.flaskenv
+
+# If you're using pytest
+.cache
+.pytest_cache/
+
+# If you generate documentation
+docs/_build/

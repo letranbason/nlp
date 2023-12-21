@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analysis Tool</title>
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Your-Font-Name&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 50px;
+            background-size: cover;
+            font-family: 'Arial', sans-serif; /* Change as per your preference */
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s; /* Animation for fade-in */
+        }
+
+        textarea {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-block {
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .btn-block:hover {
+            background-color: #004085; /* Darken button color on hover */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Text Analysis Tool</h1>
+        <form method="POST" action="/analyze">
+            <div class="form-group">
+                <textarea class="form-control" name="text" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" name="action" value="Extract Noun Phrases">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-info btn-block" name="action" value="Classify Words">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success btn-block" name="action" value="Analyze Sentiment">
+            </div>
+        </form>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

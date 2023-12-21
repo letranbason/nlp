@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .result-container {
+            background-color: #f8f9fa;
+            border: 1px solid #e3e6e8;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Results</h1>
+        <div class="result-container">
+            {% if result_type == 'noun_phrases' %}
+                <h2>Noun Phrases:</h2>
+                {% if noun_phrases %}
+                    <ul class="list-group">
+                        {% for phrase in noun_phrases %}
+                            <li class="list-group-item">{{ phrase }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-muted">No noun phrases found.</p>
+                {% endif %}
+            {% elif result_type == 'word_classification' %}
+                <h2>Word Classification:</h2>
+                    {% if word_classification %}
+                        <ul class="list-group">
+                            {% for word, tag in word_classification %}
+                                <li class="list-group-item">{{ word }} - {{ pos_tags_description[tag] if tag in pos_tags_description else tag }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                <p class="text-muted">No word classification results found.</p>
+                {% endif %}
+            {% elif result_type == 'sentiment_analysis' %}
+                <h2>Sentiment Analysis:</h2>
+                <p>Polarity: {{ sentiment }}</p>
+                <p>Assessment: {{ sentiment_description }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
