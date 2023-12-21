@@ -15,8 +15,8 @@ To install and run this application, follow the steps below:
 ### Step 1: Clone the Repository
 Clone the source code from this repository:
 ```
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/letranbason/nlp
+cd your-folder
 ```
 
 ### Step 2: Install Required Packages
