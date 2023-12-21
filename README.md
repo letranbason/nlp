@@ -30,6 +30,11 @@ Run the application by executing:
 ```
 python app.py
 ```
+or
+
+python3 app.py
+```
+
 The application will be accessible at `http://localhost:5000/`.
 
 ## Usage
